@@ -1,0 +1,75 @@
+# Build + test on every push/PR.
+#
+# The capture package requires CGO + the Npcap SDK to compile (it links
+# libpcap/wpcap). To keep CI simple and fast, we split the build:
+#   - Pure-Go packages (protocol, photon, loot, codegen): built and tested on
+#     ubuntu without any native deps.
+#   - The full build including the capture package and the lootlogger binary is
+#     done on Windows with the Npcap SDK installed.
+
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  pure-go:
+    name: Pure-Go build + test (Linux)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+      - name: Build pure-Go packages
+        run: go build ./internal/protocol/... ./internal/photon/... ./internal/loot/... ./tools/...
+      - name: Test pure-Go packages
+        run: go test -race ./internal/protocol/... ./internal/photon/... ./internal/loot/...
+      - name: Verify generated code is in sync with upstream generator
+        run: |
+          go run ./tools/codegen
+          if ! git diff --quiet -- internal/protocol; then
+            echo "::warning::Generated protocol files differ from a fresh codegen run."
+            git --no-pager diff --stat -- internal/protocol
+          fi
+
+  windows-full:
+    name: Full build (Windows + Npcap SDK)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+
+      - name: Download Npcap SDK
+        shell: pwsh
+        run: |
+          $url = "https://npcap.com/dist/npcap-sdk-1.13.zip"
+          Invoke-WebRequest -Uri $url -OutFile npcap-sdk.zip
+          Expand-Archive -Path npcap-sdk.zip -DestinationPath npcap-sdk
+
+      - name: Build full module (CGO)
+        shell: pwsh
+        env:
+          CGO_ENABLED: "1"
+        run: |
+          $sdk = "$PWD\npcap-sdk"
+          $env:CGO_CFLAGS = "-I$sdk\Include"
+          $env:CGO_LDFLAGS = "-L$sdk\Lib\x64 -lwpcap -lPacket"
+          go build ./...
+
+      - name: Test full module (CGO)
+        shell: pwsh
+        env:
+          CGO_ENABLED: "1"
+        run: |
+          $sdk = "$PWD\npcap-sdk"
+          $env:CGO_CFLAGS = "-I$sdk\Include"
+          $env:CGO_LDFLAGS = "-L$sdk\Lib\x64 -lwpcap -lPacket"
+          go test ./...

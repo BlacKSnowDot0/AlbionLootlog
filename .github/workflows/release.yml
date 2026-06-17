@@ -1,0 +1,54 @@
+# Builds a Windows x64 binary and attaches it to a GitHub release when a
+# version tag (vX.Y.Z) is pushed.
+
+name: release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    name: Build Windows x64 binary
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+
+      - name: Download Npcap SDK
+        shell: pwsh
+        run: |
+          Invoke-WebRequest -Uri "https://npcap.com/dist/npcap-sdk-1.13.zip" -OutFile npcap-sdk.zip
+          Expand-Archive -Path npcap-sdk.zip -DestinationPath npcap-sdk
+
+      - name: Build
+        shell: pwsh
+        env:
+          CGO_ENABLED: "1"
+          GOOS: windows
+          GOARCH: amd64
+        run: |
+          $sdk = "$PWD\npcap-sdk"
+          $env:CGO_CFLAGS = "-I$sdk\Include"
+          $env:CGO_LDFLAGS = "-L$sdk\Lib\x64 -lwpcap -lPacket"
+          $version = "${{ github.ref_name }}"
+          go build -trimpath -ldflags "-s -w" -o "AlbionLootlog-$version-windows-x64.exe" ./cmd/lootlogger
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: AlbionLootlog-*-windows-x64.exe
+          body: |
+            Headless Albion Online loot logger (Go port).
+
+            **Requires Npcap** (https://npcap.com) installed on the machine.
+            Run from a terminal: `AlbionLootlog.exe` (auto-detects adapter).
+            Use `-list-devices` to pick a specific adapter. By default it writes
+            a timestamped CSV file like `log-2026-06-17-02-47-50utc.csv`; use
+            `-csv my-loot.csv` to choose a specific file.
