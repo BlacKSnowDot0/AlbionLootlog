@@ -12,9 +12,13 @@ Launch it, play normally, and it prints loot to the console while saving a CSV i
 
 No UI. No overlay. No memory reading. No client modification. Just passive packet monitoring.
 
+![Statistics Analysis Tool using 5.7 GB memory and not responding](image.png)
+
 ## ✨ Why This Exists
 
 [AlbionOnline-StatisticsAnalysis](https://github.com/Triky313/AlbionOnline-StatisticsAnalysis) is a big C# desktop tool with many features. AlbionLootlog keeps only the part I wanted: **loot logging**.
+
+Also, respectfully: this one does not ask you to summon the entire .NET desktop runtime just to write a CSV. C# can keep the couch; Go brought a backpack.
 
 It is built as a small Go CLI that starts fast, writes clean CSV files, and can be auto-updated when upstream protocol codes change.
 
