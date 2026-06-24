@@ -145,7 +145,7 @@ jobs:
 
       - name: Open PR with updated baseline + review checklist
         if: steps.compare.outputs.changed == 'true' && steps.compare.outputs.first_run != 'true'
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           branch: upstream-handler-review
           title: "review: upstream loot handler logic changed"
