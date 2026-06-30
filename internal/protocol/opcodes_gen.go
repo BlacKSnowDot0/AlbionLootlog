@@ -548,6 +548,10 @@ const (
 	OperationCodeRequestLoreSnippetStates OperationCode = 537
 	OperationCodeRetrieveCarriableObjectStart OperationCode = 538
 	OperationCodeRetrieveCarriableObjectCancel OperationCode = 539
+	OperationCodeForfeitCustomMatch OperationCode = 540
+	OperationCodeGetPartyMemberCluster OperationCode = 541
+	OperationCodeSetPartyNavigation OperationCode = 542
+	OperationCodeEndPartyNavigation OperationCode = 543
 )
 
 // OperationCodeNames maps a OperationCode to its upstream identifier.
@@ -1092,6 +1096,10 @@ var OperationCodeNames = map[OperationCode]string{
 	OperationCodeRequestLoreSnippetStates: "RequestLoreSnippetStates",
 	OperationCodeRetrieveCarriableObjectStart: "RetrieveCarriableObjectStart",
 	OperationCodeRetrieveCarriableObjectCancel: "RetrieveCarriableObjectCancel",
+	OperationCodeForfeitCustomMatch: "ForfeitCustomMatch",
+	OperationCodeGetPartyMemberCluster: "GetPartyMemberCluster",
+	OperationCodeSetPartyNavigation: "SetPartyNavigation",
+	OperationCodeEndPartyNavigation: "EndPartyNavigation",
 }
 
 // String returns the upstream identifier for the OperationCode.
