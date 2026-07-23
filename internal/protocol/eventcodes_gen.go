@@ -67,9 +67,9 @@ const (
 	EventCodeLaborerObjectInfo EventCode = 56
 	EventCodeLaborerObjectJobInfo EventCode = 57
 	EventCodeMarketPlaceBuildingInfo EventCode = 58
-	EventCodeHarvestStart EventCode = 59 // map[0:5270 1:637926215956544319 2:637926215956544319 3:4250 4:16 5:1.6169999 6:5287 7:2195 252:52] - 0 = UserId, 3 = ObjectId, 5: Abbauzeit 7: Abbau-Tool (T8...
-	EventCodeHarvestCancel EventCode = 60
-	EventCodeHarvestFinished EventCode = 61 // map[0:5270 1:637926215956544319 2:637926215972723131 3:4250 4:1 5:1 7:28 8:[] 9:[] 252:54] - 0: UserId, 3: ObjectId, 4:ItemId 5: Res Standard Quantity 6: Sam...
+	EventCodeHarvestStart EventCode = 59 // 59 - 0: UserObjectId, 1: ActionId, 2: StartTime, 3: ObjectId, 4: HarvestingMode, 5: Duration, 6: InventoryObjectId, 7: ToolItemId
+	EventCodeHarvestCancel EventCode = 60 // 60
+	EventCodeHarvestFinished EventCode = 61 // 61 - 0: UserObjectId, 1: ActionId, 2: FinishTime, 3: ObjectId, 4: ItemId, 5: StandardAmount, 6: CollectorBonusAmount, 7: PremiumBonusAmount, 8: CurrentPossib...
 	EventCodeTakeSilver EventCode = 62 // map[0:-57 1:2178162 2:-57 3:10000000 8:10000 252:55]
 	EventCodeRemoveSilver EventCode = 63
 	EventCodeActionOnBuildingStart EventCode = 64
