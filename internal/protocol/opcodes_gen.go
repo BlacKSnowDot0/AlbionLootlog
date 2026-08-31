@@ -346,212 +346,222 @@ const (
 	OperationCodeSteamFinishMicrotransaction OperationCode = 335
 	OperationCodeRequestXboxPurchaseIntent OperationCode = 336
 	OperationCodeCloseXboxPurchaseIntent OperationCode = 337
-	OperationCodeSteamIdHasActiveAccount OperationCode = 338
-	OperationCodeCheckEmailAccountState OperationCode = 339
-	OperationCodeLinkAccountToSteamId OperationCode = 340
-	OperationCodeEpicIdHasActiveAccount OperationCode = 341
-	OperationCodeLinkAccountToEpicId OperationCode = 342
-	OperationCodeXboxIdHasActiveAccount OperationCode = 343
-	OperationCodeInAppConfirmPaymentGooglePlay OperationCode = 344
-	OperationCodeInAppConfirmPaymentAppleAppStore OperationCode = 345
-	OperationCodeInAppPurchaseRequest OperationCode = 346
-	OperationCodeInAppPurchaseFailed OperationCode = 347
-	OperationCodeCharacterSubscriptionInfo OperationCode = 348
-	OperationCodeAccountSubscriptionInfo OperationCode = 349
-	OperationCodeBuyGvgSeasonBooster OperationCode = 350
-	OperationCodeChangeFlaggingPrepare OperationCode = 351
-	OperationCodeOverCharge OperationCode = 352
-	OperationCodeOverChargeEnd OperationCode = 353
-	OperationCodeRequestTrusted OperationCode = 354
-	OperationCodeChangeGuildLogo OperationCode = 355
-	OperationCodePartyFinderRegisterForUpdates OperationCode = 356
-	OperationCodePartyFinderUnregisterForUpdates OperationCode = 357
-	OperationCodePartyFinderEnlistNewPartySearch OperationCode = 358
-	OperationCodePartyFinderDeletePartySearch OperationCode = 359
-	OperationCodePartyFinderChangePartySearch OperationCode = 360
-	OperationCodePartyFinderChangeRole OperationCode = 361
-	OperationCodePartyFinderApplyForGroup OperationCode = 362
-	OperationCodePartyFinderAcceptOrDeclineApplyForGroup OperationCode = 363
-	OperationCodePartyFinderGetEquipmentSnapshot OperationCode = 364
-	OperationCodePartyFinderRegisterApplicants OperationCode = 365
-	OperationCodePartyFinderUnregisterApplicants OperationCode = 366
-	OperationCodePartyFinderFulltextSearch OperationCode = 367
-	OperationCodePartyFinderRequestEquipmentSnapshot OperationCode = 368
-	OperationCodeGetPersonalSeasonTrackerData OperationCode = 369
-	OperationCodeGetPersonalSeasonPastRewardData OperationCode = 370
-	OperationCodeUseConsumableFromInventory OperationCode = 371
-	OperationCodeClaimPersonalSeasonReward OperationCode = 372
-	OperationCodeXignCodeMessageToServer OperationCode = 373
-	OperationCodeBattlEyeMessageToServer OperationCode = 374
-	OperationCodeSetNextTutorialState OperationCode = 375
-	OperationCodeAddPlayerToMuteList OperationCode = 376
-	OperationCodeRemovePlayerFromMuteList OperationCode = 377
-	OperationCodeProductShopUserEvent OperationCode = 378
-	OperationCodeGetVanityUnlocks OperationCode = 379
-	OperationCodeBuyVanityUnlocks OperationCode = 380
-	OperationCodeGetMountSkins OperationCode = 381
-	OperationCodeSetMountSkin OperationCode = 382
-	OperationCodeSetWardrobe OperationCode = 383
-	OperationCodeChangeCustomization OperationCode = 384
-	OperationCodeChangePlayerIslandData OperationCode = 385
-	OperationCodeGetGuildChallengePoints OperationCode = 386
-	OperationCodeSmartQueueJoin OperationCode = 387
-	OperationCodeSmartQueueLeave OperationCode = 388
-	OperationCodeSmartQueueSelectSpawnCluster OperationCode = 389
-	OperationCodeUpgradeHideout OperationCode = 390
-	OperationCodeInitHideoutAttackStart OperationCode = 391
-	OperationCodeInitHideoutAttackCancel OperationCode = 392
-	OperationCodeHideoutFillNutrition OperationCode = 393
-	OperationCodeHideoutGetInfo OperationCode = 394
-	OperationCodeHideoutGetOwnerInfo OperationCode = 395
-	OperationCodeHideoutSetTribute OperationCode = 396
-	OperationCodeHideoutUpgradeWithPowerCrystal OperationCode = 397
-	OperationCodeHideoutDeclareHQ OperationCode = 398
-	OperationCodeHideoutUndeclareHQ OperationCode = 399
-	OperationCodeHideoutGetHQRequirements OperationCode = 400
-	OperationCodeHideoutBoost OperationCode = 401
-	OperationCodeHideoutBoostConstruction OperationCode = 402
-	OperationCodeOpenWorldAttackScheduleStart OperationCode = 403
-	OperationCodeOpenWorldAttackScheduleCancel OperationCode = 404
-	OperationCodeOpenWorldAttackConquerStart OperationCode = 405
-	OperationCodeOpenWorldAttackConquerCancel OperationCode = 406
-	OperationCodeGetOpenWorldAttackDetails OperationCode = 407
-	OperationCodeGetNextOpenWorldAttackScheduleTime OperationCode = 408
-	OperationCodeRecoverVaultFromHideout OperationCode = 409
-	OperationCodeGetGuildEnergyDrainInfo OperationCode = 410
-	OperationCodeChannelingUpdate OperationCode = 411
-	OperationCodeUseCorruptedShrine OperationCode = 412
-	OperationCodeRequestEstimatedMarketValue OperationCode = 413
-	OperationCodeLogFeedback OperationCode = 414
-	OperationCodeGetInfamyInfo OperationCode = 415
-	OperationCodeGetPartySmartClusterQueuePriority OperationCode = 416
-	OperationCodeSetPartySmartClusterQueuePriority OperationCode = 417
-	OperationCodeClientAntiAutoClickerInfo OperationCode = 418
-	OperationCodeClientBotPatternDetectionInfo OperationCode = 419
-	OperationCodeClientAntiGatherClickerInfo OperationCode = 420
-	OperationCodeLoadoutCreate OperationCode = 421
-	OperationCodeLoadoutRead OperationCode = 422
-	OperationCodeLoadoutReadHeaders OperationCode = 423
-	OperationCodeLoadoutUpdate OperationCode = 424
-	OperationCodeLoadoutDelete OperationCode = 425
-	OperationCodeLoadoutOrderUpdate OperationCode = 426
-	OperationCodeLoadoutEquip OperationCode = 427
-	OperationCodeBatchUseItemCancel OperationCode = 428
-	OperationCodeEnlistFactionWarfare OperationCode = 429
-	OperationCodeGetFactionWarfareWeeklyReport OperationCode = 430
-	OperationCodeClaimFactionWarfareWeeklyReport OperationCode = 431
-	OperationCodeGetFactionWarfareCampaignData OperationCode = 432
-	OperationCodeClaimFactionWarfareItemReward OperationCode = 433
-	OperationCodeSendMemoryConsumption OperationCode = 434
-	OperationCodePickupCarriableObjectStart OperationCode = 435
-	OperationCodePickupCarriableObjectCancel OperationCode = 436
-	OperationCodeSetSavingChestLogsFlag OperationCode = 437
-	OperationCodeGetSavingChestLogsFlag OperationCode = 438
-	OperationCodeRegisterGuestAccount OperationCode = 439
-	OperationCodeResendGuestAccountVerificationEmail OperationCode = 440
-	OperationCodeDoSimpleActionStart OperationCode = 441
-	OperationCodeDoSimpleActionCancel OperationCode = 442
-	OperationCodeGetGvgSeasonContributionByActivity OperationCode = 443
-	OperationCodeGetGvgSeasonContributionByCrystalLeague OperationCode = 444
-	OperationCodeGetGuildMightCategoryContribution OperationCode = 445
-	OperationCodeGetGuildMightCategoryOverview OperationCode = 446
-	OperationCodeGetPvpChallengeData OperationCode = 447
-	OperationCodeClaimPvpChallengeWeeklyReward OperationCode = 448
-	OperationCodeGetPersonalMightStats OperationCode = 449
-	OperationCodeGetPvpChallengeSeasonRewards OperationCode = 450
-	OperationCodeGetPvpChallengeSeasonRewardItems OperationCode = 451
-	OperationCodeClaimPvpChallengeSeasonRewards OperationCode = 452
-	OperationCodeClaimPvpChallengeSeasonRewardItems OperationCode = 453
-	OperationCodeAuctionGetLoadoutOffers OperationCode = 454
-	OperationCodeAuctionBuyLoadoutOffer OperationCode = 455
-	OperationCodeAccountDeletionRequest OperationCode = 456
-	OperationCodeAccountReactivationRequest OperationCode = 457
-	OperationCodeCreateModeratorNotesForAccount OperationCode = 458
-	OperationCodeGetModeratorNotesForAccount OperationCode = 459
-	OperationCodeGetModerationEscalationDefiniton OperationCode = 460
-	OperationCodeEventBasedPopupAddSeen OperationCode = 461
-	OperationCodeGetItemKillHistory OperationCode = 462
-	OperationCodeGetVanityConsumables OperationCode = 463
-	OperationCodeEquipKillEmote OperationCode = 464
-	OperationCodeChangeKillEmotePlayOnKnockdownSetting OperationCode = 465
-	OperationCodeBuyVanityConsumableCharges OperationCode = 466
-	OperationCodeReclaimVanityItem OperationCode = 467
-	OperationCodeGetArenaRankings OperationCode = 468
-	OperationCodeGetCrystalLeagueStatistics OperationCode = 469
-	OperationCodeSendOptionsLog OperationCode = 470
-	OperationCodeSendControlsOptionsLog OperationCode = 471
-	OperationCodeMistsUseImmediateReturnExit OperationCode = 472
-	OperationCodeMistsUseStaticEntrance OperationCode = 473
-	OperationCodeMistsUseCityRoadsEntrance OperationCode = 474
-	OperationCodeChangeNewGuildMemberMail OperationCode = 475
-	OperationCodeGetNewGuildMemberMail OperationCode = 476
-	OperationCodeChangeGuildFactionAllegiance OperationCode = 477
-	OperationCodeGetGuildFactionAllegiance OperationCode = 478
-	OperationCodeGuildBannerChange OperationCode = 479
-	OperationCodeGuildGetOptionalStats OperationCode = 480
-	OperationCodeGuildSetOptionalStats OperationCode = 481
-	OperationCodeGetPlayerInfoForStalk OperationCode = 482
-	OperationCodePayGoldForCharacterTypeChange OperationCode = 483
-	OperationCodeQuickSellAuctionQueryAction OperationCode = 484
-	OperationCodeQuickSellAuctionSellAction OperationCode = 485
-	OperationCodeFcmTokenToServer OperationCode = 486
-	OperationCodeApnsTokenToServer OperationCode = 487
-	OperationCodeDeathRecap OperationCode = 488
-	OperationCodeAuctionFetchFinishedAuctions OperationCode = 489
-	OperationCodeAbortAuctionFetchFinishedAuctions OperationCode = 490
-	OperationCodeRequestLegendaryEvenHistory OperationCode = 491
-	OperationCodePartyAnswerStartHuntRequest OperationCode = 492
-	OperationCodeHuntAbort OperationCode = 493
-	OperationCodeUseFindTrackSpellFromItemPrepare OperationCode = 494
-	OperationCodeInteractWithTrackStart OperationCode = 495
-	OperationCodeInteractWithTrackCancel OperationCode = 496
-	OperationCodeTerritoryRaidStart OperationCode = 497
-	OperationCodeTerritoryRaidCancel OperationCode = 498
-	OperationCodeTerritoryClaimRaidedRawEnergyCrystalResult OperationCode = 499
-	OperationCodeGvGSeasonPlayerGuildParticipationDetails OperationCode = 500
-	OperationCodeDailyMightBonus OperationCode = 501
-	OperationCodeClaimDailyMightBonus OperationCode = 502
-	OperationCodeGetFortificationGroupInfo OperationCode = 503
-	OperationCodeUpgradeFortificationGroup OperationCode = 504
-	OperationCodeCancelUpgradeFortificationGroup OperationCode = 505
-	OperationCodeDowngradeFortificationGroup OperationCode = 506
-	OperationCodeGetClusterActivityChestEstimates OperationCode = 507
-	OperationCodePartyReadyCheckBegin OperationCode = 508
-	OperationCodePartyReadyCheckUpdate OperationCode = 509
-	OperationCodeClaimAlbionJournalReward OperationCode = 510
-	OperationCodeTrackAlbionJournalAchievements OperationCode = 511
-	OperationCodeTrackAlbionJournalAchievementSubCategory OperationCode = 512
-	OperationCodeRequestOutlandsTeleportationUsage OperationCode = 513
-	OperationCodePickupFromPiledObjectStart OperationCode = 514
-	OperationCodePickupFromPiledObjectCancel OperationCode = 515
-	OperationCodeAssetOverview OperationCode = 516
-	OperationCodeAssetOverviewTabs OperationCode = 517
-	OperationCodeAssetOverviewTabContent OperationCode = 518
-	OperationCodeAssetOverviewUnfreezeCache OperationCode = 519
-	OperationCodeAssetOverviewSearch OperationCode = 520
-	OperationCodeAssetOverviewSearchTabs OperationCode = 521
-	OperationCodeAssetOverviewSearchTabContent OperationCode = 522
-	OperationCodeAssetOverviewRecoverPlayerVault OperationCode = 523
-	OperationCodeImmortalizeKillTrophy OperationCode = 524
-	OperationCodeArmorySearch OperationCode = 525
-	OperationCodeArmoryItemUsageStatistics OperationCode = 526
-	OperationCodeArmoryActivityUsageStatistics OperationCode = 527
-	OperationCodeHellDungeonUseStaticEntrance OperationCode = 528
-	OperationCodeTravelIslandShowroom OperationCode = 529
-	OperationCodeGetXuids OperationCode = 530
-	OperationCodeXboxServiceTicket OperationCode = 531
-	OperationCodeEvaluatePlatformPerks OperationCode = 532
-	OperationCodeLinkAccountToXbox OperationCode = 533
-	OperationCodeTravelFactionWarfarePortal OperationCode = 534
-	OperationCodeRequestRedZoneEventStandings OperationCode = 535
-	OperationCodeGetZergDebuffInfo OperationCode = 536
-	OperationCodeRequestLoreSnippetStates OperationCode = 537
-	OperationCodeRetrieveCarriableObjectStart OperationCode = 538
-	OperationCodeRetrieveCarriableObjectCancel OperationCode = 539
-	OperationCodeForfeitCustomMatch OperationCode = 540
-	OperationCodeGetPartyMemberCluster OperationCode = 541
-	OperationCodeSetPartyNavigation OperationCode = 542
-	OperationCodeEndPartyNavigation OperationCode = 543
+	OperationCodeRequestPlayStationPurchaseIntent OperationCode = 338
+	OperationCodeClosePlayStationPurchaseIntent OperationCode = 339
+	OperationCodeSteamIdHasActiveAccount OperationCode = 340
+	OperationCodeCheckEmailAccountState OperationCode = 341
+	OperationCodeLinkAccountToSteamId OperationCode = 342
+	OperationCodeEpicIdHasActiveAccount OperationCode = 343
+	OperationCodeLinkAccountToEpicId OperationCode = 344
+	OperationCodeXboxIdHasActiveAccount OperationCode = 345
+	OperationCodePlayStationIdHasActiveAccount OperationCode = 346
+	OperationCodeInAppConfirmPaymentGooglePlay OperationCode = 347
+	OperationCodeInAppConfirmPaymentAppleAppStore OperationCode = 348
+	OperationCodeInAppPurchaseRequest OperationCode = 349
+	OperationCodeInAppPurchaseFailed OperationCode = 350
+	OperationCodeCharacterSubscriptionInfo OperationCode = 351
+	OperationCodeAccountSubscriptionInfo OperationCode = 352
+	OperationCodeBuyGvgSeasonBooster OperationCode = 353
+	OperationCodeChangeFlaggingPrepare OperationCode = 354
+	OperationCodeOverCharge OperationCode = 355
+	OperationCodeOverChargeEnd OperationCode = 356
+	OperationCodeRequestTrusted OperationCode = 357
+	OperationCodeChangeGuildLogo OperationCode = 358
+	OperationCodePartyFinderRegisterForUpdates OperationCode = 359
+	OperationCodePartyFinderUnregisterForUpdates OperationCode = 360
+	OperationCodePartyFinderEnlistNewPartySearch OperationCode = 361
+	OperationCodePartyFinderDeletePartySearch OperationCode = 362
+	OperationCodePartyFinderChangePartySearch OperationCode = 363
+	OperationCodePartyFinderChangeRole OperationCode = 364
+	OperationCodePartyFinderApplyForGroup OperationCode = 365
+	OperationCodePartyFinderAcceptOrDeclineApplyForGroup OperationCode = 366
+	OperationCodePartyFinderGetEquipmentSnapshot OperationCode = 367
+	OperationCodePartyFinderRegisterApplicants OperationCode = 368
+	OperationCodePartyFinderUnregisterApplicants OperationCode = 369
+	OperationCodePartyFinderFulltextSearch OperationCode = 370
+	OperationCodePartyFinderRequestEquipmentSnapshot OperationCode = 371
+	OperationCodeGetPersonalSeasonTrackerData OperationCode = 372
+	OperationCodeGetPersonalSeasonPastRewardData OperationCode = 373
+	OperationCodeUseConsumableFromInventory OperationCode = 374
+	OperationCodeClaimPersonalSeasonReward OperationCode = 375
+	OperationCodeXignCodeMessageToServer OperationCode = 376
+	OperationCodeAceMessage OperationCode = 377
+	OperationCodeBattlEyeMessageToServer OperationCode = 378
+	OperationCodeSetNextTutorialState OperationCode = 379
+	OperationCodeAddPlayerToMuteList OperationCode = 380
+	OperationCodeRemovePlayerFromMuteList OperationCode = 381
+	OperationCodeProductShopUserEvent OperationCode = 382
+	OperationCodeGetVanityUnlocks OperationCode = 383
+	OperationCodeBuyVanityUnlocks OperationCode = 384
+	OperationCodeGetMountSkins OperationCode = 385
+	OperationCodeSetMountSkin OperationCode = 386
+	OperationCodeSetWardrobe OperationCode = 387
+	OperationCodeChangeCustomization OperationCode = 388
+	OperationCodeChangePlayerIslandData OperationCode = 389
+	OperationCodeGetGuildChallengePoints OperationCode = 390
+	OperationCodeSmartQueueJoin OperationCode = 391
+	OperationCodeSmartQueueLeave OperationCode = 392
+	OperationCodeSmartQueueSelectSpawnCluster OperationCode = 393
+	OperationCodeUpgradeHideout OperationCode = 394
+	OperationCodeInitHideoutAttackStart OperationCode = 395
+	OperationCodeInitHideoutAttackCancel OperationCode = 396
+	OperationCodeHideoutFillNutrition OperationCode = 397
+	OperationCodeHideoutGetInfo OperationCode = 398
+	OperationCodeHideoutGetOwnerInfo OperationCode = 399
+	OperationCodeHideoutSetTribute OperationCode = 400
+	OperationCodeHideoutUpgradeWithPowerCrystal OperationCode = 401
+	OperationCodeHideoutDeclareHQ OperationCode = 402
+	OperationCodeHideoutUndeclareHQ OperationCode = 403
+	OperationCodeHideoutGetHQRequirements OperationCode = 404
+	OperationCodeHideoutBoost OperationCode = 405
+	OperationCodeHideoutBoostConstruction OperationCode = 406
+	OperationCodeOpenWorldAttackScheduleStart OperationCode = 407
+	OperationCodeOpenWorldAttackScheduleCancel OperationCode = 408
+	OperationCodeOpenWorldAttackConquerStart OperationCode = 409
+	OperationCodeOpenWorldAttackConquerCancel OperationCode = 410
+	OperationCodeGetOpenWorldAttackDetails OperationCode = 411
+	OperationCodeGetNextOpenWorldAttackScheduleTime OperationCode = 412
+	OperationCodeRecoverVaultFromHideout OperationCode = 413
+	OperationCodeGetGuildEnergyDrainInfo OperationCode = 414
+	OperationCodeChannelingUpdate OperationCode = 415
+	OperationCodeUseCorruptedShrine OperationCode = 416
+	OperationCodeRequestEstimatedMarketValue OperationCode = 417
+	OperationCodeLogFeedback OperationCode = 418
+	OperationCodeGetInfamyInfo OperationCode = 419
+	OperationCodeGetPartySmartClusterQueuePriority OperationCode = 420
+	OperationCodeSetPartySmartClusterQueuePriority OperationCode = 421
+	OperationCodeClientAntiAutoClickerInfo OperationCode = 422
+	OperationCodeClientBotPatternDetectionInfo OperationCode = 423
+	OperationCodeClientAntiGatherClickerInfo OperationCode = 424
+	OperationCodeLoadoutCreate OperationCode = 425
+	OperationCodeLoadoutRead OperationCode = 426
+	OperationCodeLoadoutReadHeaders OperationCode = 427
+	OperationCodeLoadoutUpdate OperationCode = 428
+	OperationCodeLoadoutDelete OperationCode = 429
+	OperationCodeLoadoutOrderUpdate OperationCode = 430
+	OperationCodeLoadoutEquip OperationCode = 431
+	OperationCodeBatchUseItemCancel OperationCode = 432
+	OperationCodeEnlistFactionWarfare OperationCode = 433
+	OperationCodeGetFactionWarfareWeeklyReport OperationCode = 434
+	OperationCodeClaimFactionWarfareWeeklyReport OperationCode = 435
+	OperationCodeGetFactionWarfareCampaignData OperationCode = 436
+	OperationCodeClaimFactionWarfareItemReward OperationCode = 437
+	OperationCodeSendMemoryConsumption OperationCode = 438
+	OperationCodePickupCarriableObjectStart OperationCode = 439
+	OperationCodePickupCarriableObjectCancel OperationCode = 440
+	OperationCodeSetSavingChestLogsFlag OperationCode = 441
+	OperationCodeGetSavingChestLogsFlag OperationCode = 442
+	OperationCodeRegisterGuestAccount OperationCode = 443
+	OperationCodeResendGuestAccountVerificationEmail OperationCode = 444
+	OperationCodeDoSimpleActionStart OperationCode = 445
+	OperationCodeDoSimpleActionCancel OperationCode = 446
+	OperationCodeGetGvgSeasonContributionByActivity OperationCode = 447
+	OperationCodeGetGvgSeasonContributionByCrystalLeague OperationCode = 448
+	OperationCodeGetGuildMightCategoryContribution OperationCode = 449
+	OperationCodeGetGuildMightCategoryOverview OperationCode = 450
+	OperationCodeGetPvpChallengeData OperationCode = 451
+	OperationCodeClaimPvpChallengeWeeklyReward OperationCode = 452
+	OperationCodeGetPersonalMightStats OperationCode = 453
+	OperationCodeGetPvpChallengeSeasonRewards OperationCode = 454
+	OperationCodeGetPvpChallengeSeasonRewardItems OperationCode = 455
+	OperationCodeClaimPvpChallengeSeasonRewards OperationCode = 456
+	OperationCodeClaimPvpChallengeSeasonRewardItems OperationCode = 457
+	OperationCodeAuctionGetLoadoutOffers OperationCode = 458
+	OperationCodeAuctionBuyLoadoutOffer OperationCode = 459
+	OperationCodeAccountDeletionRequest OperationCode = 460
+	OperationCodeAccountReactivationRequest OperationCode = 461
+	OperationCodeCreateModeratorNotesForAccount OperationCode = 462
+	OperationCodeGetModeratorNotesForAccount OperationCode = 463
+	OperationCodeGetModerationEscalationDefiniton OperationCode = 464
+	OperationCodeEventBasedPopupAddSeen OperationCode = 465
+	OperationCodeGetItemKillHistory OperationCode = 466
+	OperationCodeGetVanityConsumables OperationCode = 467
+	OperationCodeEquipKillEmote OperationCode = 468
+	OperationCodeChangeKillEmotePlayOnKnockdownSetting OperationCode = 469
+	OperationCodeBuyVanityConsumableCharges OperationCode = 470
+	OperationCodeReclaimVanityItem OperationCode = 471
+	OperationCodeGetArenaRankings OperationCode = 472
+	OperationCodeGetCrystalLeagueStatistics OperationCode = 473
+	OperationCodeSendOptionsLog OperationCode = 474
+	OperationCodeSendControlsOptionsLog OperationCode = 475
+	OperationCodeMistsUseImmediateReturnExit OperationCode = 476
+	OperationCodeMistsUseStaticEntrance OperationCode = 477
+	OperationCodeMistsUseCityRoadsEntrance OperationCode = 478
+	OperationCodeChangeNewGuildMemberMail OperationCode = 479
+	OperationCodeGetNewGuildMemberMail OperationCode = 480
+	OperationCodeChangeGuildFactionAllegiance OperationCode = 481
+	OperationCodeGetGuildFactionAllegiance OperationCode = 482
+	OperationCodeGuildBannerChange OperationCode = 483
+	OperationCodeGuildGetOptionalStats OperationCode = 484
+	OperationCodeGuildSetOptionalStats OperationCode = 485
+	OperationCodeGetPlayerInfoForStalk OperationCode = 486
+	OperationCodePayGoldForCharacterTypeChange OperationCode = 487
+	OperationCodeQuickSellAuctionQueryAction OperationCode = 488
+	OperationCodeQuickSellAuctionSellAction OperationCode = 489
+	OperationCodeFcmTokenToServer OperationCode = 490
+	OperationCodeApnsTokenToServer OperationCode = 491
+	OperationCodeDeathRecap OperationCode = 492
+	OperationCodeAuctionFetchFinishedAuctions OperationCode = 493
+	OperationCodeAbortAuctionFetchFinishedAuctions OperationCode = 494
+	OperationCodeRequestLegendaryEvenHistory OperationCode = 495
+	OperationCodePartyAnswerStartHuntRequest OperationCode = 496
+	OperationCodeHuntAbort OperationCode = 497
+	OperationCodeUseFindTrackSpellFromItemPrepare OperationCode = 498
+	OperationCodeInteractWithTrackStart OperationCode = 499
+	OperationCodeInteractWithTrackCancel OperationCode = 500
+	OperationCodeTerritoryRaidStart OperationCode = 501
+	OperationCodeTerritoryRaidCancel OperationCode = 502
+	OperationCodeTerritoryClaimRaidedRawEnergyCrystalResult OperationCode = 503
+	OperationCodeGvGSeasonPlayerGuildParticipationDetails OperationCode = 504
+	OperationCodeDailyMightBonus OperationCode = 505
+	OperationCodeClaimDailyMightBonus OperationCode = 506
+	OperationCodeGetFortificationGroupInfo OperationCode = 507
+	OperationCodeUpgradeFortificationGroup OperationCode = 508
+	OperationCodeCancelUpgradeFortificationGroup OperationCode = 509
+	OperationCodeDowngradeFortificationGroup OperationCode = 510
+	OperationCodeGetClusterActivityChestEstimates OperationCode = 511
+	OperationCodePartyReadyCheckBegin OperationCode = 512
+	OperationCodePartyReadyCheckUpdate OperationCode = 513
+	OperationCodeClaimAlbionJournalReward OperationCode = 514
+	OperationCodeTrackAlbionJournalAchievements OperationCode = 515
+	OperationCodeTrackAlbionJournalAchievementSubCategory OperationCode = 516
+	OperationCodeRequestOutlandsTeleportationUsage OperationCode = 517
+	OperationCodePickupFromPiledObjectStart OperationCode = 518
+	OperationCodePickupFromPiledObjectCancel OperationCode = 519
+	OperationCodeAssetOverview OperationCode = 520
+	OperationCodeAssetOverviewTabs OperationCode = 521
+	OperationCodeAssetOverviewTabContent OperationCode = 522
+	OperationCodeAssetOverviewUnfreezeCache OperationCode = 523
+	OperationCodeAssetOverviewSearch OperationCode = 524
+	OperationCodeAssetOverviewSearchTabs OperationCode = 525
+	OperationCodeAssetOverviewSearchTabContent OperationCode = 526
+	OperationCodeAssetOverviewRecoverPlayerVault OperationCode = 527
+	OperationCodeImmortalizeKillTrophy OperationCode = 528
+	OperationCodeArmorySearch OperationCode = 529
+	OperationCodeArmoryItemUsageStatistics OperationCode = 530
+	OperationCodeArmoryActivityUsageStatistics OperationCode = 531
+	OperationCodeHellDungeonUseStaticEntrance OperationCode = 532
+	OperationCodeTravelIslandShowroom OperationCode = 533
+	OperationCodeGetPlatformIds OperationCode = 534
+	OperationCodeXboxServiceTicket OperationCode = 535
+	OperationCodeEvaluatePlatformPerks OperationCode = 536
+	OperationCodeLinkAccountToXbox OperationCode = 537
+	OperationCodeLinkAccountToPlayStationId OperationCode = 538
+	OperationCodeTravelFactionWarfarePortal OperationCode = 539
+	OperationCodeRequestRedZoneEventStandings OperationCode = 540
+	OperationCodeGetZergDebuffInfo OperationCode = 541
+	OperationCodeRequestLoreSnippetStates OperationCode = 542
+	OperationCodeRetrieveCarriableObjectStart OperationCode = 543
+	OperationCodeRetrieveCarriableObjectCancel OperationCode = 544
+	OperationCodeForfeitCustomMatch OperationCode = 545
+	OperationCodeGetPartyMemberCluster OperationCode = 546
+	OperationCodeSetPartyNavigation OperationCode = 547
+	OperationCodeEndPartyNavigation OperationCode = 548
+	OperationCodeUseDragonAreaEntrance OperationCode = 549
+	OperationCodeEnterDragonAreaEntrance OperationCode = 550
+	OperationCodeSmartQueueRegionQueueInfo OperationCode = 551
+	OperationCodeSurveyCompleted OperationCode = 552
+	OperationCodeGetSurveyLogs OperationCode = 553
 )
 
 // OperationCodeNames maps a OperationCode to its upstream identifier.
@@ -894,12 +904,15 @@ var OperationCodeNames = map[OperationCode]string{
 	OperationCodeSteamFinishMicrotransaction: "SteamFinishMicrotransaction",
 	OperationCodeRequestXboxPurchaseIntent: "RequestXboxPurchaseIntent",
 	OperationCodeCloseXboxPurchaseIntent: "CloseXboxPurchaseIntent",
+	OperationCodeRequestPlayStationPurchaseIntent: "RequestPlayStationPurchaseIntent",
+	OperationCodeClosePlayStationPurchaseIntent: "ClosePlayStationPurchaseIntent",
 	OperationCodeSteamIdHasActiveAccount: "SteamIdHasActiveAccount",
 	OperationCodeCheckEmailAccountState: "CheckEmailAccountState",
 	OperationCodeLinkAccountToSteamId: "LinkAccountToSteamId",
 	OperationCodeEpicIdHasActiveAccount: "EpicIdHasActiveAccount",
 	OperationCodeLinkAccountToEpicId: "LinkAccountToEpicId",
 	OperationCodeXboxIdHasActiveAccount: "XboxIdHasActiveAccount",
+	OperationCodePlayStationIdHasActiveAccount: "PlayStationIdHasActiveAccount",
 	OperationCodeInAppConfirmPaymentGooglePlay: "InAppConfirmPaymentGooglePlay",
 	OperationCodeInAppConfirmPaymentAppleAppStore: "InAppConfirmPaymentAppleAppStore",
 	OperationCodeInAppPurchaseRequest: "InAppPurchaseRequest",
@@ -930,6 +943,7 @@ var OperationCodeNames = map[OperationCode]string{
 	OperationCodeUseConsumableFromInventory: "UseConsumableFromInventory",
 	OperationCodeClaimPersonalSeasonReward: "ClaimPersonalSeasonReward",
 	OperationCodeXignCodeMessageToServer: "XignCodeMessageToServer",
+	OperationCodeAceMessage: "AceMessage",
 	OperationCodeBattlEyeMessageToServer: "BattlEyeMessageToServer",
 	OperationCodeSetNextTutorialState: "SetNextTutorialState",
 	OperationCodeAddPlayerToMuteList: "AddPlayerToMuteList",
@@ -1086,10 +1100,11 @@ var OperationCodeNames = map[OperationCode]string{
 	OperationCodeArmoryActivityUsageStatistics: "ArmoryActivityUsageStatistics",
 	OperationCodeHellDungeonUseStaticEntrance: "HellDungeonUseStaticEntrance",
 	OperationCodeTravelIslandShowroom: "TravelIslandShowroom",
-	OperationCodeGetXuids: "GetXuids",
+	OperationCodeGetPlatformIds: "GetPlatformIds",
 	OperationCodeXboxServiceTicket: "XboxServiceTicket",
 	OperationCodeEvaluatePlatformPerks: "EvaluatePlatformPerks",
 	OperationCodeLinkAccountToXbox: "LinkAccountToXbox",
+	OperationCodeLinkAccountToPlayStationId: "LinkAccountToPlayStationId",
 	OperationCodeTravelFactionWarfarePortal: "TravelFactionWarfarePortal",
 	OperationCodeRequestRedZoneEventStandings: "RequestRedZoneEventStandings",
 	OperationCodeGetZergDebuffInfo: "GetZergDebuffInfo",
@@ -1100,6 +1115,11 @@ var OperationCodeNames = map[OperationCode]string{
 	OperationCodeGetPartyMemberCluster: "GetPartyMemberCluster",
 	OperationCodeSetPartyNavigation: "SetPartyNavigation",
 	OperationCodeEndPartyNavigation: "EndPartyNavigation",
+	OperationCodeUseDragonAreaEntrance: "UseDragonAreaEntrance",
+	OperationCodeEnterDragonAreaEntrance: "EnterDragonAreaEntrance",
+	OperationCodeSmartQueueRegionQueueInfo: "SmartQueueRegionQueueInfo",
+	OperationCodeSurveyCompleted: "SurveyCompleted",
+	OperationCodeGetSurveyLogs: "GetSurveyLogs",
 }
 
 // String returns the upstream identifier for the OperationCode.
