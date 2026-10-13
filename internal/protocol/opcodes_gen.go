@@ -562,6 +562,8 @@ const (
 	OperationCodeSmartQueueRegionQueueInfo OperationCode = 551
 	OperationCodeSurveyCompleted OperationCode = 552
 	OperationCodeGetSurveyLogs OperationCode = 553
+	OperationCodeClientFrametimeSpike OperationCode = 554
+	OperationCodeRequestDebugMobInfo OperationCode = 555
 )
 
 // OperationCodeNames maps a OperationCode to its upstream identifier.
@@ -1120,6 +1122,8 @@ var OperationCodeNames = map[OperationCode]string{
 	OperationCodeSmartQueueRegionQueueInfo: "SmartQueueRegionQueueInfo",
 	OperationCodeSurveyCompleted: "SurveyCompleted",
 	OperationCodeGetSurveyLogs: "GetSurveyLogs",
+	OperationCodeClientFrametimeSpike: "ClientFrametimeSpike",
+	OperationCodeRequestDebugMobInfo: "RequestDebugMobInfo",
 }
 
 // String returns the upstream identifier for the OperationCode.
